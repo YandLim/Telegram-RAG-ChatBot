@@ -9,3 +9,6 @@ BOT_NAME = os.getenv("BOTNAME")
 
 EMBED_MODEL = os.getenv("EMBEDMODEL")
 LOCAL_MODEL = os.getenv("LOCALMODEL")
+
+# Define file download folder
+DOWNLOAD_FOLDER = "download_file/"

@@ -1,12 +1,11 @@
 # Import modules and libraries
 from utils import prompt, logger
-from core import config
 import requests
 import json
 
 log = logger.get_logger(__name__)
 
-def chat_llm(history, question):
+def chat_llm(model: str, history: list[dict], question: str) -> str:
     # Formatting the default prompt
     llm_prompt = [{"role": "system", "content": prompt.DEFAULT_PROMPT}]
     # Checking if history is avaible
@@ -22,7 +21,7 @@ def chat_llm(history, question):
         response = requests.post(
             url="http://localhost:11434/api/chat",
             json={
-                "model": config.LOCAL_MODEL,
+                "model": model,
                 "messages": llm_prompt,
                 "options": {"temperature": 0.3}
             },

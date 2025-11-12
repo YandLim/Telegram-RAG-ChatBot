@@ -15,17 +15,17 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    log.info("Human asking for help...")
-    await update.message.reply_text("""
-    Just let me know if you need expert help
-    /start       - Starting the bot and check if it's online or not
-                                    
-    /help        - Show all the avaible command to the user
-                                    
-    /chatbot_on  - Start chatting to the chatbot just like human and human do
-                                    
-    /chatbot_off - Turn off the chatbot
-    """)
+    log.info("Human asking for help")
+    help_text = (
+        "*Available Commands:*\n\n"
+        "/start - Check if the bot is online\n"
+        "/chatbot_on - Enable normal chat mode with the bot\n"
+        "/chatbot_off - Disable chatbot responses\n"
+        "/rag - Ask questions based on your uploaded PDF file\n\n"
+        "📂 *Tip:* Just send a PDF file to let the bot learn from it."
+    )
+    await update.message.reply_markdown(help_text)
+    
 
 async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
     log.exception("error occurred")

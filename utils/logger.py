@@ -28,7 +28,7 @@ def get_logger(name: str):
     console_handler.setFormatter(formatter)
 
     # Store log messages into the file
-    file_handler = logging.FileHandler(os.path.join(log_dir, "bot_log"), encoding="utf-8")
+    file_handler = logging.FileHandler(os.path.join(log_dir, "bot_log.log"), encoding="utf-8")
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
 
