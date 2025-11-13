@@ -23,7 +23,7 @@ Using Telegram as the frontend and Python + Ollama for the local model, I made a
 - No API keys, no cloud calls — everything happens on your machine
 
 ## 🖨️ Output
-! [Chatbot Function Output](attachment/Chatbot_Output.jpg)
+<img src="attachment/Chatbot_Output.jpg" alt="Chatbot function outpu" width=500>
 *Bot responding to a question based on uploaded PDF.*
 
 ## ⚙️ How it works
