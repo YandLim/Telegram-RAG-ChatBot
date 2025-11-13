@@ -11,4 +11,5 @@ EMBED_MODEL = os.getenv("EMBEDMODEL")
 LOCAL_MODEL = os.getenv("LOCALMODEL")
 
 # Define file download folder
+LOG_FOLDER = "logs/"
 DOWNLOAD_FOLDER = "download_file/"

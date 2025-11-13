@@ -1,11 +1,12 @@
 # Importing modules and libraries
+from core import config
 import logging
 import sys
 import os
 
 def get_logger(name: str):
     # Make a log folder to store log file
-    log_dir = "logs"
+    log_dir = config.LOG_FOLDER
     os.makedirs(log_dir, exist_ok=True)
 
     # Create the logger

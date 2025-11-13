@@ -12,7 +12,7 @@ def setup_bot():
     app.add_handler(CommandHandler("chatbot_on", chatbot_handler.chatbot_on)) # Command: /chatbot_on
     app.add_handler(CommandHandler("chatbot_off", chatbot_handler.chatbot_off)) # Command: /chatbot_off
     app.add_handler(CommandHandler("start", general_handlers.start)) # Command: /start
-    app.add_handler(CommandHandler("start", general_handlers.help)) # Command: /help
+    app.add_handler(CommandHandler("help", general_handlers.help)) # Command: /help
     app.add_handler(CommandHandler("rag", rag_handler.rag_chatbot)) # Command: /rag
 
     # Handlers
